@@ -29,7 +29,7 @@ Receiver == 리시버란, 바로 이어지는 블록 내에서 메서드 및 속
  */
 
 @ExperimentalContracts
-public inline fun <T> T.applyFromStandardKT(block: T.() -> Unit): T {
+inline fun <T> T.applyFromStandardKT(block: T.() -> Unit): T {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
     }

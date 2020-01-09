@@ -40,7 +40,7 @@ fun main() {
  * For detailed usage information see the documentation for [scope functions](https://kotlinlang.org/docs/reference/scope-functions.html#with).
  */
 @ExperimentalContracts
-public inline fun <T, R> withFromStandardKT(receiver: T, block: T.() -> R): R {
+inline fun <T, R> withFromStandardKT(receiver: T, block: T.() -> R): R {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
     }

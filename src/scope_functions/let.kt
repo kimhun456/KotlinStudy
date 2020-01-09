@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
         println(Date(it))
         it
     }
-    println("Miilliseconds from 1970, 1, 1 : $currentTime")
+    println("Milliseconds from 1970, 1, 1 : $currentTime")
 
     var name: String? = null
 
@@ -43,7 +43,7 @@ let -> let은 함수를 호출하는 객체를 이어지는 블록의 인자로 
  * For detailed usage information see the documentation for [scope functions](https://kotlinlang.org/docs/reference/scope-functions.html#let).
  */
 @ExperimentalContracts
-public inline fun <T, R> T.letFromStandardKT(block: (T) -> R): R {
+inline fun <T, R> T.letFromStandardKT(block: (T) -> R): R {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
     }

@@ -28,7 +28,7 @@ fun main() {
  * For detailed usage information see the documentation for [scope functions](https://kotlinlang.org/docs/reference/scope-functions.html#run).
  */
 @ExperimentalContracts
-public inline fun <R> runFromStandardKT(block: () -> R): R {
+inline fun <R> runFromStandardKT(block: () -> R): R {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
     }
@@ -41,7 +41,7 @@ public inline fun <R> runFromStandardKT(block: () -> R): R {
  * For detailed usage information see the documentation for [scope functions](https://kotlinlang.org/docs/reference/scope-functions.html#run).
  */
 @ExperimentalContracts
-public inline fun <T, R> T.runFromStandardKT(block: T.() -> R): R {
+inline fun <T, R> T.runFromStandardKT(block: T.() -> R): R {
     contract {
         callsInPlace(block, InvocationKind.EXACTLY_ONCE)
     }

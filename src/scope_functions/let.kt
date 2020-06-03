@@ -26,7 +26,7 @@ fun main(args: Array<String>) {
     name?.let { println(it) }
 
     name = "hyunjae"
-    name?.let { println(it) }
+    name.let { println(it) }
 
 }
 

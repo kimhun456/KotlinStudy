@@ -17,6 +17,7 @@ fun main() {
     }
     println("first element of strings : $firstString")
 }
+
 /**
  * run() 은 약간 apply + let의 느낌이다.
  * receiver를 사용해서 this를 인자로 받고 block의 리턴값을 리턴하게 된다.
